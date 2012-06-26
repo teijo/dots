@@ -1,0 +1,28 @@
+[user]
+	name = Teijo Laine
+	email = teijo@aropupu.fi
+[alias]
+	b = branch
+	co = checkout
+	l = log --graph --abbrev-commit --date=relative --pretty=format:\"%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\"
+	ll = log --graph --abbrev-commit --pretty=format:\"%C(yellow)%h%Creset %C(bold blue)<%an>%C(red)%d%Creset %Cgreen(%ar) %Creset%n%s%n%n%b\"
+	r = !git l -20
+	st = status
+	s = status
+	sh = show
+	f = fetch
+	rb = rebase
+	d = diff
+	ci = commit
+[core]
+	excludesfile = ~/.gitignore_global
+	filemode = false
+	autocrlf = true
+	eol = lf
+	whitespace = trailing-space,space-before-tab
+[color]
+	ui = auto
+[rerere]
+	enabled = 1
+[apply]
+	whitespace = warn
