@@ -58,6 +58,7 @@ nmap <Leader>d :tag <cWORD><CR>
 set cinoptions=(0	" Indent lines following '(' to same level as the '('
 
 colorscheme elflord	" Dark default color scheme
+set t_Co=256
 
 if has("statusline")
   set statusline=%<%F%=%([%M%R%H%W]\ %)%l,%c%V\ %P\ (%n)
