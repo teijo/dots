@@ -22,8 +22,12 @@ unsetopt extendedglob
 
 bindkey '^R' history-incremental-search-backward
 
-alias ls='ls -FX --color=auto --group-directories-first'
-alias ll='ls -lhX'
+if [[ $(uname) != "Darwin" ]]; then
+  alias ls='ls -FX --color=auto --group-directories-first'
+  alias ll='ls -lhX'
+else
+  alias ll='ls -lh'
+fi
 alias l='ls'
 alias la='ls -A'
 alias lla='ll -A'
