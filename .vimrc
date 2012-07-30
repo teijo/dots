@@ -57,7 +57,7 @@ nmap <Leader>d :tag <cWORD><CR>
 " C indent options
 set cinoptions=(0	" Indent lines following '(' to same level as the '('
 
-colorscheme elflord	" Dark default color scheme
+colorscheme delek	" Dark default color scheme
 set t_Co=256
 
 if has("statusline")
@@ -137,7 +137,7 @@ hi VertSplit	guifg=black	guibg=gray
 	hi StatusLineNC	guifg=#CCCCCC	guibg=#333333	gui=none
 	hi Title	guifg=Pink			gui=bold
 	hi WarningMsg	guifg=Red
-	hi Visual	guifg=white	guibg=#009900	gui=bold
+	hi Visual	term=reverse	cterm=reverse	guibg=LightGrey
 	hi Function	guifg=#3399FF
 	hi Repeat	guifg=#FF9900			gui=bold " Control structure
 	hi Operator	guifg=#663300			gui=bold
@@ -154,6 +154,7 @@ hi Error	ctermfg=darkred	ctermbg=yellow	guifg=#FFFF00	guibg=#FF0000
 if has("autocmd")
 	au BufEnter *.c,*.h		set cindent
 	au BufEnter *.cpp,*.hpp		set cindent sts=4 sw=4 ts=4 et
+	au BufEnter *.cljs		set sts=2 sw=2 ts=2 et syntax=clojure
 	au BufEnter *.rb,*.sass,*.haml	set sts=2 sw=2 ts=2 et
 	au BufEnter *.sh		set sts=2 sw=2 ts=2 et
 	au BufEnter *.js,*.css		set sts=2 sw=2 ts=2 et tw=0
