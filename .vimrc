@@ -112,7 +112,7 @@ hi VertSplit	guifg=black	guibg=gray
 	hi Identifier	guifg=#6699FF			gui=none
 	hi Ignore	guifg=bg
 	hi PreProc	guifg=#CC33FF			gui=bold
-	hi Search	guifg=#FFFFFF	guibg=#FF0000
+	hi Search	cterm=reverse	ctermfg=red	ctermbg=white	gui=bold
 	hi Special	guifg=#FF0000
 	hi Statement	guifg=#FF9900 " Control structure
 	hi Type		guifg=#3399FF
