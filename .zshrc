@@ -26,6 +26,7 @@ if [[ $(uname) != "Darwin" ]]; then
   alias ls='ls -FX --color=auto --group-directories-first'
   alias ll='ls -lhX'
 else
+  alias ls='ls -GF'
   alias ll='ls -lh'
 fi
 alias l='ls'
