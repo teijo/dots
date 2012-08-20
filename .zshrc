@@ -34,6 +34,7 @@ alias la='ls -A'
 alias lla='ll -A'
 alias v='vim'
 alias g='git'
+alias trl='tree|less'
 alias grep='grep --color=auto'
 
 reset="%{${reset_color}%}"

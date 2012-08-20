@@ -152,7 +152,7 @@ hi VertSplit	guifg=black	guibg=gray
 hi Error	ctermfg=darkred	ctermbg=yellow	guifg=#FFFF00	guibg=#FF0000
 
 if has("autocmd")
-	au BufEnter *.c,*.h		set cindent
+	au BufEnter *.c,*.h		set cindent sts=4 sw=4 ts=4 et
 	au BufEnter *.cpp,*.hpp		set cindent sts=4 sw=4 ts=4 et
 	au BufEnter *.cljs		set sts=2 sw=2 ts=2 et syntax=clojure
 	au BufEnter *.rb,*.sass,*.haml	set sts=2 sw=2 ts=2 et
@@ -169,7 +169,7 @@ endif
 highlight Tab ctermfg=blue guifg=blue cterm=underline gui=underline
 highlight UglySyntax ctermbg=green guibg=green
 highlight MixedWhitespace ctermbg=cyan guibg=cyan
-highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=red guibg=red	cterm=reverse	ctermfg=red	ctermbg=red	gui=reverse
 match ExtraWhitespace  /\s\+$/
 
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
