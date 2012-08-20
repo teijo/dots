@@ -17,7 +17,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	filemode = false
-	autocrlf = true
+	autocrlf = input
 	eol = lf
 	whitespace = trailing-space,space-before-tab
 [color]
