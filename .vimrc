@@ -86,68 +86,53 @@ if has("gui_running")
 	set guioptions-=T " No toolbar
 endif
 
-" Colors
-
-hi LineNr	guifg=orange	guibg=darkred	ctermfg=black	ctermbg=gray
-hi StatusLine	ctermfg=white	ctermbg=red	guifg=black	guibg=gray
-hi StatusLineNC	ctermfg=gray	ctermbg=darkred	guifg=gray	guibg=black
-hi Folded	guibg=yellow	guifg=red
-hi VertSplit	guifg=black	guibg=gray
-
-
-" Integrated color scheme
-	hi clear
-"	set background=light
-	if exists("syntax_on")
-		syntax reset
-	endif
-	let g:colors_name = "aro"
-
-" Dark colors
-	hi Normal	guifg=#DDDDDD	guibg=#111111
-	hi Comment	guifg=#33FF33			gui=italic
-	hi Constant	guifg=#FF0099			gui=bold
-	hi Identifier	guifg=#6699FF			gui=none
-	hi Ignore	guifg=bg
-	hi PreProc	guifg=#CC33FF			gui=bold
-	hi Search	cterm=reverse	ctermfg=red	ctermbg=white	gui=bold
-	hi Special	guifg=#FF0000
-	hi Statement	guifg=#FF9900 " Control structure
-	hi Type		guifg=#3399FF
-	hi Todo		guifg=#3399FF	guibg=#FFFF00
-	" From the source:
-	hi Cursor	guifg=#000000	guibg=#00FF00
-	hi CursorLine	guibg=#EEEEEE
-	hi Directory	guifg=#006699
-	hi DiffAdd	guifg=#336633	guibg=#99FF99
-	hi DiffChange	guifg=#000000	guibg=#CCCC00
-	hi DiffDelete	guifg=#CC6666	guibg=#FFCCCC
-	hi DiffText	guifg=#FFFFFF	guibg=#999900
-	hi ErrorMsg	guifg=#FFFFFF	guibg=#FF0000
-	hi IncSearch					gui=reverse
-	hi LineNr	guifg=#CCCCCC	guibg=#666666
-	hi ModeMsg					gui=bold
-	hi MoreMsg	guifg=#006699			gui=bold
-	hi NonText	guifg=#3399FF	guibg=#222222	gui=bold
-	hi Question	guifg=#006699			gui=bold
-	hi SpecialKey	guifg=#006699
-	hi StatusLine	guifg=#EEEEEE	guibg=#666666	gui=bold
-	hi StatusLineNC	guifg=#CCCCCC	guibg=#333333	gui=none
-	hi Title	guifg=Pink			gui=bold
-	hi WarningMsg	guifg=Red
-	hi Visual	term=reverse	cterm=reverse	guibg=LightGrey
-	hi Function	guifg=#3399FF
-	hi Repeat	guifg=#FF9900			gui=bold " Control structure
-	hi Operator	guifg=#663300			gui=bold
-	hi Folded	guifg=#333333	guibg=#FFCC00	gui=italic
-	hi VertSplit	guifg=#333333	guibg=#666666
-	hi TabLineSel	guifg=#EEEEEE	guibg=#666666	gui=bold
-	hi TabLine	guifg=#CCCCCC	guibg=#333333
-	hi TabLineFill	guifg=#333333	guibg=#333333
-	hi WildMenu	guifg=#333333	guibg=#FF0000
-
-" Gui and cli compatible colors
+hi clear
+hi Normal	guifg=#DDDDDD	guibg=#111111
+hi Comment	guifg=#33FF33			gui=italic
+hi Constant	guifg=#FF0099			gui=bold
+hi Identifier	guifg=#6699FF			gui=none
+hi Ignore	guifg=bg
+hi PreProc	guifg=#CC33FF			gui=bold
+hi Search	cterm=reverse	ctermfg=red	ctermbg=white	gui=bold
+hi Special	guifg=#FF0000
+hi Statement	guifg=#FF9900 " Control structure
+hi Type		guifg=#3399FF
+hi Todo		guifg=#3399FF	guibg=#FFFF00
+hi Cursor	guifg=#000000	guibg=#00FF00
+hi CursorLine	guibg=#EEEEEE
+hi Directory	guifg=#006699
+hi DiffAdd	guifg=#336633	guibg=#99FF99
+hi DiffChange	guifg=#000000	guibg=#CCCC00
+hi DiffDelete	guifg=#CC6666	guibg=#FFCCCC
+hi DiffText	guifg=#FFFFFF	guibg=#999900
+hi ErrorMsg	guifg=#FFFFFF	guibg=#FF0000
+hi IncSearch					gui=reverse
+hi LineNr	guifg=#CCCCCC	guibg=#666666
+hi ModeMsg					gui=bold
+hi MoreMsg	guifg=#006699			gui=bold
+hi NonText	guifg=#3399FF	guibg=#222222	gui=bold
+hi Question	guifg=#006699			gui=bold
+hi SpecialKey	guifg=#006699
+hi StatusLine	guifg=#EEEEEE	guibg=#666666	gui=bold
+hi StatusLineNC	guifg=#CCCCCC	guibg=#333333	gui=none
+hi Title	guifg=Pink			gui=bold
+hi WarningMsg	guifg=Red
+hi Visual	term=reverse	cterm=reverse	guibg=LightGrey
+hi Function	guifg=#3399FF
+hi Repeat	guifg=#FF9900			gui=bold " Control structure
+hi Operator	guifg=#663300			gui=bold
+hi Folded	guifg=#333333	guibg=#FFCC00	gui=italic
+hi VertSplit	guifg=#333333	guibg=#666666
+hi TabLineSel	guifg=#EEEEEE	guibg=#666666	gui=bold
+hi TabLine	guifg=#CCCCCC	guibg=#333333
+hi TabLineFill	guifg=#333333	guibg=#333333
+hi WildMenu	guifg=#333333	guibg=#FF0000
 hi Error	ctermfg=darkred	ctermbg=yellow	guifg=#FFFF00	guibg=#FF0000
+
+highlight Tab ctermfg=blue guifg=blue cterm=underline gui=underline
+highlight UglySyntax ctermbg=green guibg=green
+highlight MixedWhitespace ctermbg=cyan guibg=cyan
+highlight ExtraWhitespace ctermbg=red guibg=red	cterm=reverse	ctermfg=red	ctermbg=red	gui=reverse
 
 if has("autocmd")
 	au BufEnter *.c,*.h		set cindent sts=4 sw=4 ts=4 et
@@ -161,24 +146,12 @@ if has("autocmd")
 	au BufEnter *.cpd,*.cdt,*.cst	set filetype=c
 	au BufEnter *.a38,*.a86		set filetype=asm
 	au BufRead,BufNewFile *.scala	set filetype=scala et ts=2 sts=2 sw=2
+
+	au InsertEnter *	syn match ExtraWhitespace /\s\+\%#\@<!$/
+	au BufEnter *		syn match MixedWhitespace / \+\ze\t\|\t \+/
+	au BufEnter *		syn match UglySyntax /if(\|else{\|}else\|for(\|){\|\,[^ ]\|( \| )/
+	au BufEnter,InsertLeave *	syn match ExtraWhitespace /\s\+$/ containedin=ALL
+	au VimEnter *		syn match Tab /\t/ containedin=ALL
 endif
-
-" Highlight invalid whitespace
-highlight Tab ctermfg=blue guifg=blue cterm=underline gui=underline
-highlight UglySyntax ctermbg=green guibg=green
-highlight MixedWhitespace ctermbg=cyan guibg=cyan
-highlight ExtraWhitespace ctermbg=red guibg=red	cterm=reverse	ctermfg=red	ctermbg=red	gui=reverse
-match ExtraWhitespace  /\s\+$/
-
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-"autocmd BufWinLeave * call clearmatches()
-
-autocmd Syntax * syn match MixedWhitespace / \+\ze\t\|\t \+/
-
-"autocmd Syntax * syn match UglySyntax /if(\|else(\|for(\|while(/
-autocmd Syntax * syn match UglySyntax /if(\|else{\|}else\|for(\|){\|\,[^ ]\|( \| )/
-autocmd Syntax * syn match Tab /\t/
 
 
