@@ -4,6 +4,37 @@ if [ -z $HOME ]; then
 	exit 1
 fi
 
+# Touch this file to track when last time asked for update
+TOUCHED=$(stat -f "%m" $0)
+NOW=$(date +%s)
+DIFF=$(expr $NOW - $TOUCHED)
+
+# Check updates every 3 days (259200 seconds)
+if [ $DIFF -gt 259200 ]; then
+  while true; do
+    echo "Pull updates? Y(es)/n(o)"
+    read decision
+    case $decision in
+    "Y")
+      pushd $(dirname $0) &> /dev/null
+      echo "Pull in $(pwd)"
+      git pull
+      popd &> /dev/null
+      break
+      ;;
+    "n")
+      break
+      ;;
+    *)
+      continue
+      ;;
+    esac
+  done
+  touch $0
+fi
+
+# Link automatically all dotfiles, prompt if existing file found that would be
+# replaced by the link
 ROOT="$(pwd)/$(dirname $0)"
 for file in $(find $ROOT -type f -depth 1 -name ".*"); do
 	link="$HOME/$(basename $file)"
