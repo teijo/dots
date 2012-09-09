@@ -1,7 +1,7 @@
 " vim: noexpandtab sw=8 ts=8 sts=8
 " .vimrc -- Teijo Laine (aropupu@aropupu.fi)
 
-language en_US.utf8	" Use english due to the prompts
+language en_US		" Use english due to the prompts
 syntax on		" Use syntax highlighting
 
 let mapleader=","
