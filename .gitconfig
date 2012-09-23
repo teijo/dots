@@ -13,7 +13,9 @@
 	f = fetch
 	rb = rebase
 	d = diff
+	dc = diff --cached
 	ci = commit -v
+	a = add
 [core]
 	excludesfile = ~/.gitignore_global
 	filemode = false
