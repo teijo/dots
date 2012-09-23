@@ -47,7 +47,9 @@ red="%{$fg[red]%}"
 yellow="%{$fg[yellow]%}"
 
 export PROMPT="%n${red}@${reset}%m:${yellow}%c${reset}%# "
+export EDITOR=vim
 
 LC_ALL=fi_FI.utf8
 LC_CTYPE=fi_FI.utf8
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
