@@ -140,6 +140,7 @@ if has("autocmd")
 	au BufEnter *.cljs		set sts=2 sw=2 ts=2 et syntax=clojure
 	au BufEnter *.rb,*.sass,*.haml	set sts=2 sw=2 ts=2 et
 	au BufEnter *.sh		set sts=2 sw=2 ts=2 et
+	au BufEnter *.ls		set sts=2 sw=2 ts=2 et syntax=ls
 	au BufEnter *.js,*.css		set sts=2 sw=2 ts=2 et tw=0
 	au BufEnter *.jsp,*.ftl,*.html	set sts=2 sw=2 ts=2 noexpandtab tw=0
 	au BufEnter *.ftl		set filetype=ftl
