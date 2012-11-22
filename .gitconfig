@@ -12,10 +12,14 @@
 	sh = show
 	f = fetch
 	rb = rebase
+	rbi = rebase -i
 	d = diff
 	dc = diff --cached
 	ci = commit -v
+	cia = commit -v --amend
+	ciaa = commit -a -v --amend
 	a = add
+	ap = add -p
 [core]
 	excludesfile = ~/.gitignore_global
 	filemode = false
