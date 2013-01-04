@@ -139,6 +139,7 @@ if has("autocmd")
 	au BufEnter *.cpp,*.hpp		set cindent sts=4 sw=4 ts=4 et
 	au BufEnter *.cljs		set sts=2 sw=2 ts=2 et syntax=clojure
 	au BufEnter *.rb,*.sass,*.haml	set sts=2 sw=2 ts=2 et
+	au BufEnter *.yml		set sts=2 sw=2 ts=2 et tw=0 syntax=yaml
 	au BufEnter *.sh		set sts=2 sw=2 ts=2 et
 	au BufEnter *.ls		set sts=2 sw=2 ts=2 et syntax=ls
 	au BufEnter *.js,*.css		set sts=2 sw=2 ts=2 et tw=0
@@ -146,6 +147,7 @@ if has("autocmd")
 	au BufEnter *.ftl		set filetype=ftl
 	au BufEnter *.cpd,*.cdt,*.cst	set filetype=c
 	au BufEnter *.a38,*.a86		set filetype=asm
+	au BufEnter *.j2		set syntax=jinja
 	au BufRead,BufNewFile *.scala	set filetype=scala et ts=2 sts=2 sw=2
 
 	au InsertEnter *	syn match ExtraWhitespace /\s\+\%#\@<!$/
