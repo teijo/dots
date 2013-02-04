@@ -6,7 +6,7 @@ syntax on		" Use syntax highlighting
 
 let mapleader=","
 map <Leader>t :CommandT<Enter>
-map <Leader>v :execute 'silent !tmux send-keys -t .-1 ./view.sh Enter'<Bar>redraw!<C-M>
+map <Leader>v :execute 'silent !tmux send-keys -t .-1 "\!\!" Enter'<Bar>redraw!<C-M>
 
 set autoindent		" Autoindent
 set background=dark	" Set the colour schema to something reasonable
