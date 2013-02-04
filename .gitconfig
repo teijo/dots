@@ -1,6 +1,5 @@
 [user]
 	name = Teijo Laine
-	email = teijo@aropupu.fi
 [alias]
 	b = branch
 	co = checkout
