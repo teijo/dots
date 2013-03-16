@@ -53,4 +53,6 @@ export EDITOR=vim
 LC_ALL=fi_FI.utf8
 LC_CTYPE=fi_FI.utf8
 
+PATH="$HOME/bin:./node_modules/.bin:$PATH"
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
