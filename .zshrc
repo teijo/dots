@@ -31,6 +31,7 @@ else
   alias ls='ls -GF'
   alias ll='ls -lh'
 fi
+alias \?='echo $USER@`hostname`:$PWD'
 alias l='ls'
 alias la='ls -A'
 alias lla='ll -A'
@@ -47,7 +48,8 @@ green="%{$fg_bold[green]%}"
 red="%{$fg[red]%}"
 yellow="%{$fg[yellow]%}"
 
-export PROMPT="%n${red}@${reset}%m:${yellow}%c${reset}%# "
+#export PROMPT="%n${red}@${reset}%m:${yellow}%c${reset}%# "
+export PROMPT="${green}%#${reset} "
 export EDITOR=vim
 
 LC_ALL=fi_FI.utf8
