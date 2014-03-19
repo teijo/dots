@@ -7,8 +7,7 @@
 	ll = log --graph --abbrev-commit --pretty=format:\"%C(yellow)%h%Creset %C(bold blue)<%an>%C(red)%d%Creset %Cgreen(%ar) %Creset%n%s%n%n%b\"
 	r = !git l -20
 	st = status
-	s = status
-	sh = show
+	s = show
 	f = fetch
 	rb = rebase
 	rbi = rebase -i
@@ -19,6 +18,7 @@
 	ciaa = commit -a -v --amend
 	a = add
 	ap = add -p
+	lp = log -p --decorate
 [core]
 	excludesfile = ~/.gitignore_global
 	filemode = false
@@ -29,5 +29,11 @@
 	ui = auto
 [rerere]
 	enabled = 1
+	autoupdate = true
 [apply]
 	whitespace = warn
+[mergetool "kdiff3"]
+	keepBackup = false
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+[merge]
+	tool = kdiff3
