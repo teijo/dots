@@ -52,8 +52,17 @@ yellow="%{$fg[yellow]%}"
 export PROMPT="${green}%#${reset} "
 export EDITOR=vim
 
-LC_ALL=fi_FI.utf8
-LC_CTYPE=fi_FI.utf8
+export TERM="screen-256color"
+
+if [[ $(uname) != "Darwin" ]]; then
+  LC_ALL=fi_FI.utf8
+  LC_CTYPE=fi_FI.utf8
+else
+  LC_ALL=fi_FI.UTF-8
+  LC_CTYPE=fi_FI.UTF-8
+fi
+
+w () { find . -name "*$1*" }
 
 PATH="$HOME/bin:./node_modules/.bin:$PATH"
 
