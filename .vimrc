@@ -47,7 +47,8 @@ set winwidth=80		" Minimum window (split) width when active
 set winheight=24	" Minimum window (split) height when active
 set tags=../../../tags,../../tags,../tags,./tags,tags	" ctags sources
 set encoding=utf-8
-set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
+set listchars=nbsp:¬,tab:>-,extends:»,precedes:«,trail:•
+set list
 
 nmap <Right> :vimgrep <cword> `find . -type f -exec grep -Iq '' '{}' ';' -print`<CR>:copen<CR>
 nmap <Down> :cclose<CR>
