@@ -3,18 +3,24 @@
 [alias]
 	b = branch
 	co = checkout
+	cop = checkout -p
+	rep = reset -p
 	l = log --graph --abbrev-commit --date=relative --pretty=format:\"%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\"
 	ll = log --graph --abbrev-commit --pretty=format:\"%C(yellow)%h%Creset %C(bold blue)<%an>%C(red)%d%Creset %Cgreen(%ar) %Creset%n%s%n%n%b\"
 	r = !git l -20
 	st = status
 	s = show
 	f = fetch
+	pr = pull --rebase
+	poh = push origin HEAD
 	rb = rebase
 	rbi = rebase -i
 	d = diff
 	dc = diff --cached
+	dw = diff --word-diff
 	ci = commit -v
 	cia = commit -v --amend
+	cim = commit -m
 	ciaa = commit -a -v --amend
 	a = add
 	ap = add -p
