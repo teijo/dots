@@ -32,6 +32,7 @@ else
   alias ll='ls -lh'
 fi
 alias \?='echo $USER@`hostname`:$PWD'
+alias d='docker'
 alias l='ls'
 alias la='ls -A'
 alias lla='ll -A'
