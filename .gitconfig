@@ -31,6 +31,7 @@
 	autocrlf = input
 	eol = lf
 	whitespace = trailing-space,space-before-tab
+	ignorecase = false
 [color]
 	ui = auto
 [rerere]
