@@ -18,6 +18,7 @@
 	d = diff
 	dc = diff --cached
 	dw = diff --word-diff
+	sw = show --word-diff
 	ci = commit -v
 	cia = commit -v --amend
 	cim = commit -m
