@@ -4,6 +4,10 @@
 language en_US		" Use english due to the prompts
 syntax on		" Use syntax highlighting
 
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 let mapleader=","
 map <Leader>t :CommandT<Enter>
 map <Leader>v :execute 'silent !tmux send-keys -t .-1 "\!\!" Enter'<Bar>redraw!<C-M>
