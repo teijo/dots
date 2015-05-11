@@ -61,7 +61,7 @@ nmap <Leader>d :tag <cWORD><CR>
 " C indent options
 set cinoptions=(0	" Indent lines following '(' to same level as the '('
 
-colorscheme delek	" Dark default color scheme
+colorscheme elflord	" Dark default color scheme
 set t_Co=256
 
 if has("statusline")
@@ -91,49 +91,6 @@ if has("gui_running")
 	set guioptions-=e " Console dialogs
 	set guioptions-=T " No toolbar
 endif
-
-hi clear
-hi Normal	guifg=#DDDDDD	guibg=#111111
-hi Comment	guifg=#33FF33			gui=italic
-hi Constant	guifg=#FF0099			gui=bold
-hi Identifier	guifg=#6699FF			gui=none
-hi Ignore	guifg=bg
-hi PreProc	guifg=#CC33FF			gui=bold
-hi Search	cterm=reverse	ctermfg=red	ctermbg=white	gui=bold
-hi Special	guifg=#FF0000
-hi Statement	guifg=#FF9900 " Control structure
-hi Type		guifg=#3399FF
-hi Todo		guifg=#3399FF	guibg=#FFFF00
-hi Cursor	guifg=#000000	guibg=#00FF00
-hi CursorLine	guibg=#EEEEEE
-hi Directory	guifg=#006699
-hi DiffAdd	guifg=#336633	guibg=#99FF99
-hi DiffChange	guifg=#000000	guibg=#CCCC00
-hi DiffDelete	guifg=#CC6666	guibg=#FFCCCC
-hi DiffText	guifg=#FFFFFF	guibg=#999900
-hi ErrorMsg	guifg=#FFFFFF	guibg=#FF0000
-hi IncSearch					gui=reverse
-hi LineNr	guifg=#CCCCCC	guibg=#666666
-hi ModeMsg					gui=bold
-hi MoreMsg	guifg=#006699			gui=bold
-hi NonText	guifg=#3399FF	guibg=#222222	gui=bold
-hi Question	guifg=#006699			gui=bold
-hi SpecialKey	guifg=#006699
-hi StatusLine	guifg=#EEEEEE	guibg=#666666	gui=bold
-hi StatusLineNC	guifg=#CCCCCC	guibg=#333333	gui=none
-hi Title	guifg=Pink			gui=bold
-hi WarningMsg	guifg=Red
-hi Visual	term=reverse	cterm=reverse	guibg=LightGrey
-hi Function	guifg=#3399FF
-hi Repeat	guifg=#FF9900			gui=bold " Control structure
-hi Operator	guifg=#663300			gui=bold
-hi Folded	guifg=#333333	guibg=#FFCC00	gui=italic
-hi VertSplit	guifg=#333333	guibg=#666666
-hi TabLineSel	guifg=#EEEEEE	guibg=#666666	gui=bold
-hi TabLine	guifg=#CCCCCC	guibg=#333333
-hi TabLineFill	guifg=#333333	guibg=#333333
-hi WildMenu	guifg=#333333	guibg=#FF0000
-hi Error	ctermfg=darkred	ctermbg=yellow	guifg=#FFFF00	guibg=#FF0000
 
 highlight Tab ctermfg=blue guifg=blue cterm=underline gui=underline
 highlight UglySyntax ctermbg=green guibg=green
