@@ -1,7 +1,14 @@
 " vim: noexpandtab sw=8 ts=8 sts=8
 " .vimrc -- Teijo Laine (aropupu@aropupu.fi)
 
-language en_US		" Use english due to the prompts
+let os = substitute(system('uname'), "\n", "", "")
+
+if os == "Linux"
+	language en_US.UTF-8
+elseif os == "Darwin"
+	language en_US
+endif
+
 syntax on		" Use syntax highlighting
 
 execute pathogen#infect()
