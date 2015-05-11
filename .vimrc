@@ -126,18 +126,3 @@ if has("autocmd")
 	au BufEnter,InsertLeave *	syn match ExtraWhitespace /\s\+$/ containedin=ALL
 	au VimEnter *		syn match Tab /\t/ containedin=ALL
 endif
-
-" Inline compile-on-save script from
-" http://markhansen.co.nz/autocompiling-haml/
-au BufWritePost *.haml call HamlMake()
-function! HamlMake()
-    py << ENDOFPYTHON
-import os
-import vim
-in_file = vim.current.buffer.name
-dirname = os.path.dirname(in_file)
-if os.path.exists(dirname + "/.autohaml"):
-    out_file = in_file[0:-5] + ".html"
-    os.system("haml %s > %s" % (in_file, out_file))
-ENDOFPYTHON
-endfunction
