@@ -51,7 +51,7 @@ set softtabstop=8	" Tab expand size in spaces.
 set tabstop=8		" Visible tab length in characters.
 set textwidth=78	" The column at which 'gqq' wraps with a newline.
 set viminfo='50,h
-set visualbell		" Visual flash instead of noisy bell.
+set novisualbell	" Disable to prevent terminal from printing command chars
 set wildmenu		" When using tab auto fill for filenames, list all options.
 set wildmode=list:longest   " List all options like ls does. Tab fill by longest match.
 set winwidth=80		" Minimum window (split) width when active
