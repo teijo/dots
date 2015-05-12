@@ -34,21 +34,21 @@ set magic		" Some regexp characters (like '(') need to be backslashed in order t
 set matchtime=50	" Set show match time to 5 seconds
 set nobackup		" Don't leave backup files in dir (swap files " work well enough for recovery)
 set nocompatible	" Vim defaults
-set noexpandtab		" Use tabs
+set expandtab		" Use spaces
 set nojoinspaces	" Joining won't care about punctuation (.!?)
 set nomore		" Do not pause screenfulls of output
 set noruler		" No ruler (status line)
 set scrolloff=2		" Set number of scroll padding lines
 set shiftround		" Shift at columns that are indent multiples
-set shiftwidth=8	" How many characters auto-indent indents.
+set shiftwidth=2	" How many characters auto-indent indents.
 set shortmess=aOtI	" Shorter messages
 set showbreak=<<<<	" At the beginning of a wrapping line
 set showmatch		" Show matching parens for short time
 set showmode		" Display active mode like -- INSERT -- on status row.
 set smartcase		" Upper case chars in search string turn search to case-sensitive.
 set smarttab		" Spaces at beginning of line, tabs elsewhere
-set softtabstop=8	" Tab expand size in spaces.
-set tabstop=8		" Visible tab length in characters.
+set softtabstop=2	" Tab expand size in spaces.
+set tabstop=2		" Visible tab length in characters.
 set textwidth=78	" The column at which 'gqq' wraps with a newline.
 set viminfo='50,h
 set novisualbell	" Disable to prevent terminal from printing command chars
