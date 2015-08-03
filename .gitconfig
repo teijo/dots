@@ -22,6 +22,7 @@
 	ci = commit -v
 	cia = commit -v --amend
 	cim = commit -m
+	ciam = commit -a -m
 	ciaa = commit -a -v --amend
 	a = add
 	ap = add -p
