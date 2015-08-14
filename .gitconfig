@@ -11,6 +11,7 @@
 	st = status
 	s = show
 	f = fetch
+	fp = fetch -p
 	pr = pull --rebase
 	poh = push origin HEAD
 	rb = rebase
