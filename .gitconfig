@@ -15,6 +15,7 @@
 	fp = fetch -p
 	pr = pull --rebase
 	poh = push origin HEAD
+	pohf = push origin HEAD --force
 	rb = rebase
 	rbi = rebase -i
 	d = diff
