@@ -3,6 +3,7 @@
 [alias]
 	b = branch
 	co = checkout
+	cob = checkout -b
 	cop = checkout -p
 	rep = reset -p
 	l = log --graph --abbrev-commit --date=relative --pretty=format:\"%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\"
