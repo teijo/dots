@@ -61,8 +61,6 @@ set encoding=utf-8
 set listchars=nbsp:¬,tab:>-,extends:»,precedes:«,trail:•
 set list
 
-nmap <Right> :vimgrep <cword> `find . -type f -exec grep -Iq '' '{}' ';' -print`<CR>:copen<CR>
-nmap <Down> :cclose<CR>
 nmap <Leader>d :tag <cWORD><CR>
 
 " C indent options
