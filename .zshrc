@@ -65,6 +65,35 @@ fi
 
 w () { find . -name "*$1*" }
 
+ssh2() {
+  local color=$1
+  shift
+  sh -c "ssh $@ -t \"export PS1='\[\e[4${color};37m\][\t/\u@\h]\[\e[0;37m\]>\[\e[0m\] ';sh\""
+}
+qa () {
+  if [ $# -ne 1 ]; then
+    echo "Usage: qa <host>";
+  else
+    ssh2 5 "qa-$1"
+  fi
+}
+
+dev () {
+  if [ $# -ne 1 ]; then
+    echo "Usage: dev <host>";
+  else
+    ssh2 4 "dev-$1"
+  fi
+}
+
+prod () {
+  if [ $# -ne 1 ]; then
+    echo "Usage: prod <host>";
+  else
+    ssh2 1 "prod-$1"
+  fi
+}
+
 PATH="$HOME/bin:./node_modules/.bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
