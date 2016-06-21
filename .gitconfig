@@ -31,6 +31,7 @@
 	ap = add -p
 	lp = log -p --decorate
 	sprp = !git stash && git pull --rebase && git stash pop
+	tips = !git pull && git submodule update --init --recursive --remote
 [core]
 	excludesfile = ~/.gitignore_global
 	filemode = false
