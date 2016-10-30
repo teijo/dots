@@ -58,10 +58,10 @@ export TERM="screen-256color"
 if [[ $(uname) != "Darwin" ]]; then
   LC_ALL=fi_FI.utf8
   LC_CTYPE=fi_FI.utf8
+  xset r rate 150 40
 else
   LC_ALL=fi_FI.UTF-8
   LC_CTYPE=fi_FI.UTF-8
-  xset r rate 150 40
 fi
 
 w () { find . -name "*$1*" }
