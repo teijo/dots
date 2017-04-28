@@ -1,13 +1,13 @@
 [user]
 	name = Teijo Laine
 [alias]
-	b = branch
+	b = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(objectname:short)%(color:reset) - %(color:bold red)(%(refname:short))%(color:reset) %(contents:subject) %(color:green)(%(committerdate:relative))%(color:reset) %(color:bold blue)<%(authorname)>%(color:reset)'
 	co = checkout
 	cob = checkout -b
 	cop = checkout -p
 	rep = reset -p
-	l = log --graph --abbrev-commit --date=relative --pretty=format:\"%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\"
-	ll = log --graph --abbrev-commit --pretty=format:\"%C(yellow)%h%Creset %C(bold blue)<%an>%C(red)%d%Creset %Cgreen(%ar) %Creset%n%s%n%n%b\"
+	l = log --graph --abbrev-commit --date=relative --pretty=format:\"%C(yellow)%h%Creset -%C(bold red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset\"
+	ll = log --graph --abbrev-commit --pretty=format:\"%C(yellow)%h%Creset %C(bold blue)<%an>%C(bold red)%d%Creset %Cgreen(%ar) %Creset%n%s%n%n%b\"
 	r = !git l -20
 	st = status
 	s = show
