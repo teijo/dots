@@ -1,7 +1,7 @@
 [user]
 	name = Teijo Laine
 [alias]
-	b = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(objectname:short)%(color:reset) - %(color:bold red)(%(refname:short))%(color:reset) %(contents:subject) %(color:green)(%(committerdate:relative))%(color:reset) %(color:bold blue)<%(authorname)>%(color:reset)'
+	b = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(objectname:short)%(color:reset) - %(color:bold red)(%(refname:short))%(color:reset) %(contents:subject) %(color:green)(%(committerdate:relative))%(color:reset) %(color:bold blue)<%(authorname)>%(color:reset)'
 	co = checkout
 	cob = checkout -b
 	cop = checkout -p
